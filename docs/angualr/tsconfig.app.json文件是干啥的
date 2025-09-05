@@ -1,0 +1,60 @@
+---
+title: tsconfig.app.json文件是干啥的
+authors: [bb]
+---
+
+### tsconfig.app.json文件是干啥的
+
+它就是专门为 Angular 主应用代码编译 服务的 tsconfig。
+比如 Angular CLI 在构建时，运行的是：ng build
+其实等价于：tsc -p tsconfig.app.json
+
+
+### 一个典型的 Angular 14 项目的 tsconfig.app.json：
+```js
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts"
+  ]
+}
+```
+"extends": "./tsconfig.json"
+继承根目录的 tsconfig.json 基础配置。
+
+"compilerOptions"
+针对应用代码的额外设置，比如输出目录。
+
+"files"
+入口文件（main.ts、polyfills.ts）。
+
+"include"
+要纳入编译的文件范围，一般是 src/**/*.ts 和 src/**/*.d.ts。
+
+
+
+### tsconfig.json / tsconfig.app.json 的关系
+
+tsconfig.json
+放一些「所有项目都通用」的基础配置，比如 strict, baseUrl。
+
+tsconfig.app.json
+是专门给某一个项目（比如 main-app）用的配置。
+
+tsconfig.lib.json / tsconfig.spec.json
+分别可能对应 库项目 和 单元测试。
+
+这样做的好处是：
+
+共享配置（在 tsconfig.json）
+
+各项目可以覆盖自己需要的特殊配置（在 tsconfig.app.json / tsconfig.lib.json）。
