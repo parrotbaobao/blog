@@ -37,7 +37,7 @@ authors: [bb]
 "files"
 入口文件（main.ts、polyfills.ts）。
 
-"include"
+"include"  
 要纳入编译的文件范围，一般是 src/**/*.ts 和 src/**/*.d.ts。
 
 
