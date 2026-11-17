@@ -5,20 +5,20 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Peekaboo',
+  title: 'Blog',
   tagline: '学习笔记',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com',
+  url: 'https://parrotbaobao.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/peekaboo',
+  baseUrl: '/blog/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'parrotbaobao', // Usually your GitHub org/user name.
-  projectName: 'peekaboo', // Usually your repo name.
+  projectName: 'blog', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
@@ -41,7 +41,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/parrotbaobao/blog/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -52,7 +52,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/parrotbaobao/blog/edit/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -69,9 +69,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Peekaboo',
+      title: 'Blog',
       logo: {
-        alt: 'Peekaboo Logo',
+        alt: 'Blog Logo',
         src: 'img/docusaurus.png',
         width: 32,
         height: 32,
